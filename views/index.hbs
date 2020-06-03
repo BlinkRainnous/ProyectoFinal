@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head }}
+
+<body>
+    <div class="contenedor">
+        {{> header }}
+
+        <div class="panel">
+            <div class="panel__texto oculto--mobile">
+                <h2>¿Tienes algún plan?</h2>
+            </div>
+            <a class="panel__boton--general " href="pages/general.hbs" id="general">
+                <img src="assets/icons/web/general.svg" alt="img">
+                <p>General</p>
+            </a>
+            <a class="panel__boton--ajustes " href="#" id="ajustes">
+                <img src="assets/icons/web/ajustes.svg" alt="img">
+                <p>Ajustes</p>
+            </a>
+
+            <a class="panel__boton--lugares " href="#" id="lugares">
+                <img src="assets/icons/web/lugares.svg" alt="img">
+                <p>Lugares</p>
+            </a>
+            <a class="panel__boton--clima " href="#" id="clima">
+                <img src="assets/icons/web/clima.svg" alt="img">
+                <p>Clima</p>
+            </a>
+
+            <a class="panel__boton--planes " href="planes" id="planes">
+                <img src="assets/icons/web/planes.svg" alt="img">
+                <p>Planes</p>
+            </a>
+        </div>
+
+        {{> nav }}
+
+        {{> footer }}
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

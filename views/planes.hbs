@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head }}
+
+<body>
+    <div class="contenedor contenedor--planes">
+        {{> header }}
+
+        {{> nav }}
+
+        <div class="banner ">
+            <h1>Planes</h1>
+        </div>
+
+
+        <!-- Tablon central -->
+        <div class="tablon" id="tablon">
+            <!-- Login - Registro -->
+            <div class="tab-contenedor">
+                <div class="tab-frame" id="loginRegistro">
+                    <input type="radio" class="tab--none" name="tab" id="tab1" checked>
+                    <label for="tab1">Login</label>
+
+                    <input type="radio" class="tab--none" name="tab" id="tab2">
+                    <label for="tab2">Registro</label>
+
+                    <div class="tab">
+                        <div class="form">
+                            <label for="id_emailLogin">Email</label><br>
+                            <input type="email" name="email" id="id_emailLogin"><br>
+
+                            <label for="id_passLogin">Contraseña</label><br>
+                            <input type="password" name="pass" id="id_passLogin"><br>
+                            <button class="boton" id="login">Login</button>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <div class="form">
+                            <label for="id_usuario">Nombre de usuario</label><br>
+                            <input type="text" name="usuario" id="id_usuario"><br>
+
+                            <label for="id_emailReg">Email</label><br>
+                            <input type="email" name="email" id="id_emailReg"><br>
+
+                            <label for="id_passReg">Contraseña</label><br>
+                            <input type="password" name="pass" id="id_passReg"><br>
+
+                            <button class="boton" id="registrar">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Añadir planes -->
+            <div class="tablon__add" id="tablonAdd">
+                <h3>Agregar plan</h3>
+                <input type="text" id="addPlanValue">
+                <button class="boton" id="add">Add</button>
+                <button class="boton" id="Logout">Logout</button>
+            </div>
+
+            <!-- Usuarios registrados -->
+            <div class="tablon__usuarios oculto--plan" id="tablonUsuarios">
+                <h4>Marca los usuarios que pueden acceder al plan</h4>
+                <div id="listaUsuarios"></div>
+                <button class="boton" id="checkBoxOK">OK</button>
+            </div>
+
+            <!-- Cards con planes -->
+            <div class="tablon__plan" id="tablonDinamico">
+
+            </div>
+
+            <!-- Tablon de mensajes -->
+            <div class="tablon__chat oculto--plan" id="chat">
+                <button class="boton oculto--plan" id="atras">Atrás</button>
+                <div id="chatTitulo"></div>
+                <div class="innerMsg" id="innerMsg">
+                    <!-- mensajes generados dinamicamente-->
+                </div>
+                <input type="text" id="addMensaje" placeholder="envía un mensaje...">
+                <button class="boton" id="enviar">enviar</button>
+            </div>
+        </div>
+
+        {{> footer }}
+
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+        <script src="js/planes.js"></script>
+    </div>
